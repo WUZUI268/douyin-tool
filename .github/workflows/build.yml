@@ -31,12 +31,10 @@ jobs:
         tag_name: v1.0.0
         name: Windows EXE v1.0.0
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: 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  # 直接使用你的 PAT
 
     - name: Upload EXE to Release
       uses: softprops/action-gh-release@v1
       with:
         tag_name: v1.0.0
-        files: dist/抖音视频去重工具.exe
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        files: dist/抖
