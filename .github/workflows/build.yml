@@ -20,12 +20,10 @@ jobs:
       run: |
         python -m pip install --upgrade pip -i https://pypi.tuna.tsinghua.edu.cn/simple
         pip install pyqt5 pyinstaller -i https://pypi.tuna.tsinghua.edu.cn/simple
-      retry: 3  # 自动重试
 
     - name: Build with PyInstaller
       run: |
         pyinstaller -F -w --clean --name "抖音视频去重工具.exe" douyin_tool.py
-      retry: 3
 
     - name: Create Release
       uses: softprops/action-gh-release@v1
